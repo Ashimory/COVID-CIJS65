@@ -16,7 +16,7 @@ export default class Form{
     getShots() {
         return this.shots.length;
     }
-    static getTotalShots() {
+    static get totalShots() {
         return Form.totalShots;
     }
     toString() {

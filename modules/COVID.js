@@ -36,4 +36,4 @@ for (let form of formList) {
     }
 }
 // "Tính tổng số liều vắc-xin đã tiêm"
-console.log("----------Total shots: " + Form.getTotalShots() + "----------");
+console.log("----------Total shots: " + Form.totalShots + "----------");
