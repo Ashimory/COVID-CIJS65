@@ -1,3 +1,10 @@
+/**Class cho thông tin cá nhân, có tên, tuổi, giới tính và địa chỉ 
+ * @param {string} name tên
+ * @param {string} age tuổi
+ * @param {string} gender giới tính
+ * @param {string} address địa chỉ
+ * @constructor
+*/
 export default class Person {
     name; age; gender;
     constructor (name, age, gender, address) {

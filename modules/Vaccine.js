@@ -1,5 +1,10 @@
+/**Class cho các loại vaccine, có tên, nhà sản xuất và nơi sản xuất
+ * @param {string} name tên
+ * @param {string} manufacturer nhà sản xuất
+ * @param {string} origin nơi sản xuất
+ * @constructor
+*/
 export default class Vaccine{
-    /** Class for vaccine types. Contains info on name, manufacturer and origin country. */ 
     name; manufacturer; origin;
     constructor (name, manufacturer, origin) {
         this.name = name;

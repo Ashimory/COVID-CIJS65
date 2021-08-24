@@ -1,6 +1,8 @@
 import Form from "./Form.js";
 import Person from "./Person.js";
 import Vaccine from "./Vaccine.js";
+
+/**Khởi tạo sẵn mấy biến để test cho dễ */
 const Astra = new Vaccine("Vaxzevria", "AstraZeneca", "UK");
 const Pfizer = new Vaccine("Comirnaty", "Pfizer/BioNTech", "US");
 const Moderna = new Vaccine("Spikevax", "Moderna", "US");
@@ -15,19 +17,23 @@ const formList = [
     new Form(new Person("Tran Linh Duong", 24, "female", "Giap Nhi"), [Moderna], ["24-08-2021"]),
 ];
 
+/**Vụ log ra thì vì em lười nên in hết ra luôn :v
+ * Tại đề bài cũng hơi khó hiểu vụ ở trên có giới tính ở dưới lại log địa chỉ nên em in hết luôn cho an toàn.
+  */
+
 // "Thống kê những người dân đã được tiêm ít nhất 1 loại vắc-xin"
-console.log("Those vaccinated at least once:")
+console.log("----------Those vaccinated at least once:----------")
 for (let form of formList) {
     if (form.getShots()) {
         console.log(form + "\n");
     }
 }
 //  "Thống kê những người già chưa được tiêm vắc-xin"
-console.log("Unvaccinated seniors:")
+console.log("----------Unvaccinated seniors:----------")
 for (let form of formList) {
     if (form.person.ageGroup() == "senior" && !form.getShots()) {
-        console.log(form + "\n");
+        console.log(form.person + "\n");
     }
 }
 // "Tính tổng số liều vắc-xin đã tiêm"
-console.log("Total shots: " + Form.getTotalShots());
+console.log("----------Total shots: " + Form.getTotalShots() + "----------");
